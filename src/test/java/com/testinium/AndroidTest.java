@@ -19,6 +19,17 @@ public class AndroidTest extends BaseTest {
     }
 
     @Test
+    public void basicAndroidTest2() throws InterruptedException {
+        Thread.sleep(20000);
+
+        WebElement generalButton = driver.findElement(AppiumBy.xpath("//*[contains(@text, \"Kategoriler\")]"));
+        generalButton.click();
+        logger.info("Clicked to Kategoriler");
+
+        Thread.sleep(2000);
+    }
+    
+    @Test
     @Disabled("Geçici olarak kapalı / refactor bekliyor")
     public void skippedTest() throws InterruptedException {
         WebElement generalButton = driver.findElement(AppiumBy.xpath("(//android.widget.ImageView[@resource-id=\"com.gratis.android:id/navigation_bar_item_icon_view\"])[1]"));
