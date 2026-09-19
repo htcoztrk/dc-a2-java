@@ -28,6 +28,17 @@ public class AndroidTest extends BaseTest {
 
         Thread.sleep(2000);
     }
+
+      @Test
+    public void basicAndroidTest3() throws InterruptedException {
+        Thread.sleep(20000);
+
+        WebElement generalButton = driver.findElement(AppiumBy.xpath("//*[contains(@text, \"Kategoriler\")]"));
+        generalButton.click();
+        logger.info("Clicked to Kategoriler");
+
+        Thread.sleep(2000);
+    }
     
     @Test
     @Disabled("Geçici olarak kapalı / refactor bekliyor")
